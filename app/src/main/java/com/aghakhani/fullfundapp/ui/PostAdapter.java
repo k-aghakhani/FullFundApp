@@ -90,7 +90,7 @@ public class PostAdapter extends ListAdapter<Post, PostAdapter.VH> {
 
             if (!safe(post.getDeadline()).isEmpty()) {
                 b.tvDeadline.setVisibility(View.VISIBLE);
-                b.tvDeadline.setText("Deadline:" + post.getDeadline());
+                b.tvDeadline.setText("Deadline: " + post.getDeadline());
             } else {
                 b.tvDeadline.setVisibility(View.GONE);
             }
