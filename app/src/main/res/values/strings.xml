@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">FullFundApp</string>
+    <string name="app_name">مرجع فاند و پوزیشن‌های تحصیلی</string>
+    <string name="toolbar_title">مرجع فاند و پوزیشن‌های تحصیلی</string>
+    <string name="toolbar_subtitle">جدیدترین فرصت‌ها برای همه رشته‌ها</string>
+
+    <string name="empty_title">فعلاً موردی ثبت نشده</string>
+    <string name="empty_desc">به محض اضافه شدن فرصت جدید، اینجا نمایش داده می‌شود.</string>
+
+    <string name="error_title">مشکل در دریافت اطلاعات</string>
+    <string name="error_desc">اتصال اینترنت یا سرور را بررسی کنید و دوباره تلاش کنید.</string>
+
+    <string name="retry">تلاش مجدد</string>
 </resources>
