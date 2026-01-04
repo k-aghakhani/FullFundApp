@@ -14,10 +14,61 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:title="@string/toolbar_title"
-            app:subtitle="@string/toolbar_subtitle"
-            app:titleCentered="false"/>
+            android:minHeight="84dp"
+            app:title=""
+            app:subtitle=""
+            app:contentInsetStart="0dp"
+            app:contentInsetEnd="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetStartWithNavigation="0dp"
+            app:contentInsetEndWithActions="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:paddingBottom="12dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
+
+                <TextView
+                    android:id="@+id/tvToolbarTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/toolbar_title"
+                    android:textDirection="rtl"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tvToolbarSubtitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/toolbar_subtitle"
+                    android:textDirection="rtl"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:alpha="0.85"
+                    android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    app:layout_constraintTop_toBottomOf="@id/tvToolbarTitle"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
     </com.google.android.material.appbar.AppBarLayout>
+
 
     <FrameLayout
         android:layout_width="match_parent"
