@@ -55,27 +55,38 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                app:singleLine="true"
-                app:chipSpacingHorizontal="6dp">
+                app:singleLine="false"
+                app:chipSpacingHorizontal="6dp"
+                app:chipSpacingVertical="6dp">
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chipCountry"
                     style="@style/Widget.Material3.Chip.Assist"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:maxWidth="130dp"/>
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chipLevel"
                     style="@style/Widget.Material3.Chip.Assist"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:maxWidth="130dp"/>
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chipFund"
                     style="@style/Widget.Material3.Chip.Assist"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:maxWidth="150dp"/>
             </com.google.android.material.chip.ChipGroup>
+
 
             <TextView
                 android:id="@+id/tvDeadline"
@@ -83,7 +94,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:alpha="0.85"
+                android:textDirection="rtl"
+                android:gravity="end"
+                android:textAlignment="viewEnd"
                 android:textAppearance="@style/TextAppearance.Material3.BodySmall"/>
+
+
         </LinearLayout>
 
     </LinearLayout>
