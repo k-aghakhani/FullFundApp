@@ -39,6 +39,14 @@ public class MainActivity extends AppCompatActivity {
 
         setSupportActionBar(b.toolbar);
 
+
+// Ensure the default ActionBar title/subtitle don't interfere with our custom centered header.
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setTitle("");
+            getSupportActionBar().setSubtitle("");
+        }
+
+
         vm = new ViewModelProvider(this).get(PostViewModel.class);
 
         setupRecycler();
