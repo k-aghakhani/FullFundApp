@@ -1,17 +1,18 @@
 package com.aghakhani.fullfundapp.data.repository;
 
-import android.os.Handler;
-import android.os.Looper;
-
-import com.aghakhani.fullfundapp.data.mock.MockPosts;
 import com.aghakhani.fullfundapp.data.model.Post;
+import com.aghakhani.fullfundapp.data.model.PostsResponse;
+import com.aghakhani.fullfundapp.data.remote.RetrofitClient;
 
 import java.util.List;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 /**
  * Data repository for the posts feed.
- * In Phase 1, it returns mock data (no backend integration).
- * In Phase 2, this will be replaced with an API-driven implementation.
+ * Phase 1 (online): Fetches posts from the PHP/MySQL backend.
  */
 public class PostRepository {
 
@@ -20,19 +21,23 @@ public class PostRepository {
         void onError(String message);
     }
 
-    // Toggle this later when your PHP API is ready.
-    private static final boolean USE_MOCK = true;
+    public void fetchPosts(int page, int limit, RepoCallback callback) {
+        RetrofitClient.api().getPosts(page, limit).enqueue(new Callback<PostsResponse>() {
+            @Override
+            public void onResponse(Call<PostsResponse> call, Response<PostsResponse> response) {
+                if (!response.isSuccessful() || response.body() == null) {
+                    callback.onError("Server response error (" + response.code() + ")");
+                    return;
+                }
 
-    public void fetchPosts(RepoCallback callback) {
-        if (USE_MOCK) {
-            // Simulate network latency for a realistic loading experience.
-            new Handler(Looper.getMainLooper()).postDelayed(() -> {
-                callback.onSuccess(MockPosts.getDefault());
-            }, 700);
-            return;
-        }
+                List<Post> data = response.body().getData();
+                callback.onSuccess(data);
+            }
 
-        // TODO: Replace with API call implementation.
-        callback.onError("Backend API is not connected yet.");
+            @Override
+            public void onFailure(Call<PostsResponse> call, Throwable t) {
+                callback.onError("Network error: " + (t.getMessage() != null ? t.getMessage() : "Unknown"));
+            }
+        });
     }
 }
