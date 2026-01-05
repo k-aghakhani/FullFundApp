@@ -24,10 +24,11 @@ public class PostViewModel extends ViewModel {
     /**
      * Loads the feed for the main screen.
      */
+
     public void load() {
         state.setValue(UiState.loading());
 
-        repository.fetchPosts(new PostRepository.RepoCallback() {
+        repository.fetchPosts(1, 30, new PostRepository.RepoCallback() {
             @Override
             public void onSuccess(List<Post> posts) {
                 if (posts == null || posts.isEmpty()) {
@@ -43,4 +44,5 @@ public class PostViewModel extends ViewModel {
             }
         });
     }
+
 }
