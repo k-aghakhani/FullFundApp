@@ -13,7 +13,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public final class RetrofitClient {
 
     // Base URL MUST end with '/'
-    private static final String BASE_URL = "https://rasfam.ir/fullfundapp/";
+    private static final String BASE_URL = "https://.../";
 
     private static Retrofit retrofit;
 

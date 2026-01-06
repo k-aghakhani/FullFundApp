@@ -13,7 +13,7 @@ public interface ApiService {
 
     /**
      * Example:
-     * GET https://rasfam.ir/fullfundapp/api/posts.php?page=1&limit=30
+     * GET https://.../api/posts.php?page=1&limit=30
      */
     @GET("api/posts.php")
     Call<PostsResponse> getPosts(
