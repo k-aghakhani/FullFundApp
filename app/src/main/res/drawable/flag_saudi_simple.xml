@@ -1,0 +1,6 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="64dp" android:height="64dp"
+    android:viewportWidth="64" android:viewportHeight="64">
+    <!-- Simplified solid green (official flag contains script and sword) -->
+    <path android:fillColor="#0B8043" android:pathData="M8,10h48v44H8z"/>
+</vector>

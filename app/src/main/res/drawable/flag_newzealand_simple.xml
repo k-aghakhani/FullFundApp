@@ -1,0 +1,17 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="64dp" android:height="64dp"
+    android:viewportWidth="64" android:viewportHeight="64">
+
+    <!-- Background (simplified) -->
+    <path android:fillColor="#1E3A8A" android:pathData="M8,10h48v44H8z"/>
+
+    <!-- Simplified red stars (no Union Jack for simplicity) -->
+    <path android:fillColor="#C62828"
+        android:pathData="M44,22 L45,25 L48,25 L45.5,26.7 L46.5,29.5 L44,27.8 L41.5,29.5 L42.5,26.7 L40,25 L43,25 Z"/>
+    <path android:fillColor="#C62828"
+        android:pathData="M50,30 L51,33 L54,33 L51.5,34.7 L52.5,37.5 L50,35.8 L47.5,37.5 L48.5,34.7 L46,33 L49,33 Z"/>
+    <path android:fillColor="#C62828"
+        android:pathData="M44,36 L45,39 L48,39 L45.5,40.7 L46.5,43.5 L44,41.8 L41.5,43.5 L42.5,40.7 L40,39 L43,39 Z"/>
+    <path android:fillColor="#C62828"
+        android:pathData="M52,40 L53,43 L56,43 L53.5,44.7 L54.5,47.5 L52,45.8 L49.5,47.5 L50.5,44.7 L48,43 L51,43 Z"/>
+</vector>
