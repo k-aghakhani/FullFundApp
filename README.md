@@ -129,3 +129,6 @@ Planned improvements:
 
 **Kiarash Aghakhani**  
 GitHub: https://github.com/k-aghakhani
+
+Email: kiarash1988@gmail.com
+
