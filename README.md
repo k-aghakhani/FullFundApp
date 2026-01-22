@@ -131,7 +131,7 @@ Planned improvements:
 - GitHub: https://github.com/k-aghakhani
 - Email: kiarash1988@gmail.com
 
-Enjoy the game and happy coding! 🎉
+
 
 
 
